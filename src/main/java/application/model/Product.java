@@ -2,11 +2,10 @@ package application.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import javax.annotation.processing.Generated;
 import javax.validation.constraints.*;
 
 /**
@@ -14,12 +13,10 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "A product object")
 @Validated
-@javax.annotation.Generated(value = "com.ibm.mobile.sdkgen.platform.JavaSpringBindingsConfig", date = "2019-03-26T21:21:29.320Z")
-
-public class Product   {
+@Generated(value = "com.ibm.mobile.sdkgen.platform.JavaSpringBindingsConfig", date = "2019-03-26T21:21:29.320Z")
+public class Product {
   @JsonProperty("identifier")
   private Long identifier = null;
-
   @JsonProperty("name")
   private String name = null;
 
@@ -34,8 +31,6 @@ public class Product   {
   **/
   @ApiModelProperty(required = true, value = "")
   @NotNull
-
-
   public Long getIdentifier() {
     return identifier;
   }
@@ -54,9 +49,7 @@ public class Product   {
    * @return name
   **/
   @ApiModelProperty(required = true, value = "")
-  @NotNull
-
-
+  @NotBlank
   public String getName() {
     return name;
   }
